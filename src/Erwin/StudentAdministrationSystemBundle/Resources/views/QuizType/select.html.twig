@@ -1,0 +1,77 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:QuizType:quizType.html.twig' %}
+{% block selectForm %}
+    <div class="div-select">
+        <table style="margin: auto;">
+            <tr>
+                <td>        
+                    <h4 style="margin: 10px; color:purple; font-weight:bold;">
+                        Quiz Type Administration System
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <table border="5" style="margin: auto;">
+                <tr>
+                    <th colSpan="2" style="text-align:center; color:blue;">
+                        Add New Quiz Type Record =================>
+                    </th>
+                    <td colSpan="2" style="text-align:center; color:blue;">
+                        <a href="{{ path("quizType_add") }}">Add</a>
+                    </td>
+                </tr>    
+                <tr>
+                    <th colSpan="2" style="text-align:center; color:blue;">
+                        Search Criteria
+                    </th>
+                    <th colSpan="2" rowSpan="2" style="text-align:center; color:blue;">
+                        Actions
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align:center;">QuizType ID</th>
+                    <th style="text-align:center;">Quiz Type</th>
+                </tr>
+                <tr>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.quizTypeId, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.quizTypeName, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td colSpan="2" class="center-inside-cell">
+                        {{ form_widget(form.search, {"label" : "Search"}) }}
+                    </td>                               
+                </tr>               
+                <tr>
+                    <th colSpan="2" style="text-align:center; color:blue;">
+                        Search Results
+                    </th>
+                    <th colSpan="2" rowSpan="2" style="text-align:center; color:blue;">
+                        Actions
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align:center;">QuizType ID</th>
+                    <th style="text-align:center;">QuizType Name</th>                
+                </tr>
+                {% for clas in quizType %}
+                    <tr>
+                        <td style="text-align:center;">
+                            {{ clas.quizTypeid }}
+                        </td>
+                        <td style="text-align:center;">
+                            {{ clas.quizTypename }}
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="{{ path("quizType_update", {"id" : clas.quizTypeid}) }}">Update</a>                                        
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="{{ path("quizType_delete", {"id" : clas.quizTypeid}) }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

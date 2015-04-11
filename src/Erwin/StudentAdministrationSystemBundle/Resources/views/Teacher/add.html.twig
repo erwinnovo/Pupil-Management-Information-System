@@ -1,0 +1,51 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Teacher:teacher.html.twig' %}
+
+{% block addForm %}
+    <div class="div-add">
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            {{ form_errors(form) }}
+
+                <div>
+                    {{ form_label(form.firstName, "First Name:") }}
+                    {{ form_errors(form.firstName) }}
+                    {{ form_widget(form.firstName) }}
+                </div>
+                <div>
+                    {{ form_label(form.middleName, "Middle Name:") }}
+                    {{ form_errors(form.middleName) }}
+                    {{ form_widget(form.middleName) }}
+                </div>
+                <div>
+                    {{ form_label(form.lastName, "Last Name:") }}
+                    {{ form_errors(form.lastName) }}
+                    {{ form_widget(form.lastName) }}
+                </div>
+                <div style="text-align: center; margin-top: 5px;">
+                    {{ form_widget(form.save, { "attr": {"style": "font-weight: bold; color: blue;" }, "label" : "Add Teacher Record"}) }}
+                </div>
+        {{ form_end(form) }}
+    </div>    
+{% endblock %}
+{% block processMessage %}
+    {% if message == "" %}
+        <p></p>    
+    {% else %}
+        <p style="margin-left:150px; margin-top: 20px; font-weight:bold; color:maroon;">{{ message }}</p>        
+    {% endif %}
+{% endblock %}    
+{#
+{% block addform %}
+    <div style="margin-left: 150px; margin-top: 50px;">
+        <h5 style="color:purple; font-weight:bold;">Student Administration System</h5>
+        <form>
+            <table border="5">
+                <tr><th colSpan="2" style="text-align:center; color:blue;">Student Particulars</th></tr>
+                <tr><td>First Name</td><td><input type="text" name="firstName"></td></tr>
+                <tr><td>Middle Name</td><td><input type="text" name="middleName"></td></tr>
+                <tr><td>Last Name</td><td><input type="text" name="lastName"></td></tr>
+                <tr><td colSpan="2" style="text-align: center;"><input type="submit" name="addStudent" value="Add Student"></td></tr>
+            </table>
+        </form>
+    </div>
+{% endblock %}
+#}

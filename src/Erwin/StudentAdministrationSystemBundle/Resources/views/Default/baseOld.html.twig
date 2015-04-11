@@ -1,0 +1,90 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>{% block title %}PIMS{% endblock %}          
+        </title>        
+        <link type = "text/css" rel = "stylesheet" href = "{{ asset('bundles/erwinstudentadministrationsystem/css/bootstrap.min.css') }}">
+        <link type = "text/css" rel = "stylesheet" href = "{{ asset('bundles/erwinstudentadministrationsystem/css/bootstrap-theme.min.css') }}">
+        <link type = "text/css" rel = "stylesheet" href = "{{ asset('bundles/erwinstudentadministrationsystem/css/font-awesome.css') }}">
+        <link type = "text/css" rel = "stylesheet" href = "{{ asset('bundles/erwinstudentadministrationsystem/css/cool.css') }}">
+        <script src = "{{ asset('bundles/erwinstudentadministrationsystem/js/jquery.js') }}"></script>
+        <script src = "{{ asset('bundles/erwinstudentadministrationsystem/js/jquery-ui.min.js') }}"></script>
+        <script src = "{{ asset('bundles/erwinstudentadministrationsystem/js/bootstrap.min.js') }}"></script>     
+        <script src = "{{ asset('bundles/erwinstudentadministrationsystem/js/symfony.js') }}"></script>
+        {% block javaScript %}{% endblock %}
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "navbar-header">
+                <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
+                    <span class = "icon-bar"></span><span class = "icon-bar">                            
+                    </span><span class = "icon-bar"></span>
+                </button>
+                <a href = "{{ app.request.getBaseURL() }}/index/" class = "navbar-brand">Pupil Information Management System</a>
+            </div>
+            <div class = "navbar-collapse collapse">
+                <ul class = "nav navbar-nav">
+                    <li><a href ="{{ url('default') }}">PIMS</a></li>
+                    <li><a href ="http://localhost/symfony/web/app_dev.php/contact/">Contact</a></li>
+                    <li class = "dropdown"><a href ="#" class ="dropdown-toggle" data-toggle = "dropdown">{% block MenuLabel %}Tasks{% endblock %}<b class ="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">   
+                        {% block dropDownMenu %}
+                            <li class="dropdown-submenu"><a>Data Entry</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ path("student") }}">Pupils</a></li>
+                                    <li><a href="{{ path("teacher") }}">Teachers</a></li>
+                                    <li><a href="{{ path("class") }}">Classes</a></li>
+                                    <li><a href="{{ path("subject") }}">Subjects</a></li>
+                                    <li><a href="{{ path("teacher_subject") }}">Teacher to Subject Assignment</a></li>
+                                    <li><a href="{{ path("teacher_class") }}">Teacher to Class Assignment</a></li>
+                                    <li><a href="{{ path("quarter") }}">Quarters</a></li>
+                                    <li><a href="{{ path("recitation_type") }}">Recitation Types</a></li>
+                                    <li><a href="{{ path("quiz_type") }}">Quiz Types</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu"><a>Data Maintenance</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Quizzes</a></li>
+                                    <li><a href="">Recitations</a></li>
+                                    <li><a href="">Assignments</a></li>
+                                    <li><a href="">Projects</a></li>
+                                    <li><a href="">Examinations</a></li>
+                                </ul>                                
+                            </li>
+                            <li class="dropdown-submenu"><a>Report Generation</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Quizzes</a></li>
+                                    <li><a href="">Recitations</a></li>
+                                    <li><a href="">Assignments</a></li>
+                                    <li><a href="">Projects</a></li>
+                                    <li><a href="">Examinations</a></li>
+                                </ul>                                                                
+                            </li>
+                        {% endblock %}
+                        </ul>
+                    </li>                    
+                </ul>
+            </div>
+        </div>              
+        <div style="text-align:center;">
+            <h1>Pupil Information Management System</h1>
+            <h4>Because Pupil Records Should Never Be a Chore!</h4>
+        </div>
+                        
+        {% block addForm %}
+        {% endblock %}
+        {% block selectForm %}
+        {% endblock %}
+        {% block updateForm %}
+        {% endblock %}
+        {% block deleteForm %}
+        {% endblock %}     
+        {% block processMessage %}
+        {% endblock %}     
+        
+        
+    </body>
+</html>
+    

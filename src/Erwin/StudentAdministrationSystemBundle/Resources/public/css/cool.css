@@ -1,0 +1,138 @@
+.dropdown-submenu 
+{
+    position:relative;
+}
+
+.dropdown-submenu>.dropdown-menu 
+{
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu 
+{
+    display:block;
+}
+
+.dropdown-submenu>a:after 
+{
+    display:block;
+    content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    //border-left-color:#cccccc;
+    border-left-color:gray;
+    margin-top:5px;
+    margin-right:-10px;    
+}
+
+.dropdown-submenu:hover>a:after 
+{
+    //border-left-color:#ffffff; 
+    border-left-color:black; 
+}
+
+.dropdown-submenu.pull-left 
+{
+    float:none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu 
+{
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}
+
+.dropdown-menu li >a:hover
+{
+    background-color:black; background:darkorchid !important    
+}
+
+.student-box
+{
+    width: 160px; 
+    margin: auto; 
+    padding: 0;
+    text-align:center;
+}
+
+.center-inside-cell
+{
+    text-align:center;
+    color: blue;
+}
+
+.div-add
+{
+    width:350px; 
+    height:140px; 
+    padding: 10px; 
+    margin-left: 150px; 
+    margin-top: 50px; 
+    border: solid; 
+    border-radius: 15px; 
+    border-color: blue;
+    box-shadow: 10px 10px 5px #888888;    
+}
+
+.div-delete
+{   
+    width:380px; 
+    height:170px; 
+    padding: 10px; 
+    margin-left: 150px; 
+    margin-top: 50px; 
+    border: solid; 
+    border-radius: 15px; 
+    border-color: blue;
+    box-shadow: 10px 10px 5px #888888;   
+}
+
+.div-select
+{
+    width: 900px;
+    padding: 20px;
+    margin: auto;
+    //margin-left: 150px; 
+    //margin-top: 50px;
+    border: solid; 
+    border-radius: 15px; 
+    border-color: blue;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.div-update
+{
+    width:380px; 
+    height:170px; 
+    padding: 10px; 
+    margin-left: 150px; 
+    margin-top: 50px; 
+    border: solid; 
+    border-radius: 15px; 
+    border-color: blue;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.table-inside-div
+{
+    margin: auto;
+    border: 5px solid black;    
+    //box-shadow: 10px 10px 5px #888888;
+}
+
+.cell-border
+{
+    border: 1px solid black;
+}

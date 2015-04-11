@@ -1,0 +1,29 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Student:student.html.twig' %}
+{% block selectForm %}
+    <div style="width: 360px;
+                padding: 20px;
+                margin-left: 150px; 
+                margin-top: 50px;
+                border: solid; 
+                border-radius: 15px; 
+                border-color: blue;
+                box-shadow: 10px 10px 5px #888888;"
+    >
+        <h5 style="margin: 10px; color:purple; font-weight:bold;">Pupil Administration System</h5>
+        <table border="5" style="margin: auto;">
+            <tr><th colSpan="3" style="text-align:center; color:blue;">Pupil Particulars</th></tr>
+            <tr>
+                <th style="text-align:center;">First Name</th>
+                <th style="text-align:center;">Middle Name</th>
+                <th style="text-align:center;">Last Name</th>
+            </tr>
+            {% for student in students %}
+                <tr>
+                    <td style="text-align:center;">{{ student.firstname }}</td>
+                    <td style="text-align:center;">{{ student.middlename }}</td>
+                    <td style="text-align:center;">{{ student.lastname }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

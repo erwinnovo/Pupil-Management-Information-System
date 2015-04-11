@@ -1,0 +1,223 @@
+default:
+    path:     /index/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+student:    
+    path:     /student/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Student:select}
+
+student_add:
+    path:     /student/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Student:add}
+
+student_delete:
+    path:     /student/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Student:delete}
+
+student_select:
+    path:     /student/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Student:select}
+
+student_update:
+    path:     /student/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Student:update}
+
+quiz:
+    path:     /quiz/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Quiz:quiz}
+
+test:
+    path:     /test/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Test:test}
+
+contact:
+    path:     /contact/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Contact:contact}
+
+teacher:
+    path:     /teacher/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Teacher:select}
+
+teacher_add:
+    path:     /teacher/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Teacher:add}    
+
+teacher_delete:
+    path:     /teacher/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Teacher:delete}    
+    
+teacher_select:
+    path:     /teacher/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Teacher:select}    
+
+teacher_update:
+    path:     /teacher/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Teacher:update}    
+
+subject:
+    path:     /subject/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Subject:select}
+
+subject_add:
+    path:     /subject/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Subject:add}    
+
+subject_delete:
+    path:     /subject/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Subject:delete}    
+    
+subject_select:
+    path:     /subject/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Subject:select}    
+
+subject_update:
+    path:     /subject/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Subject:update}    
+
+class:
+    path:     /class/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Class:select}
+
+class_add:
+    path:     /class/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Class:add}    
+
+class_delete:
+    path:     /class/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Class:delete}    
+    
+class_select:
+    path:     /class/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Class:select}    
+
+class_update:
+    path:     /class/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Class:update}    
+
+teacher_subject:
+    path:     /techer_subject/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+teacher_class:
+    path:     /teacher_class/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+quarter:
+    path:     /quarter/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Quarter:select}
+
+quarter_add:
+    path:     /quarter/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Quarter:add}    
+
+quarter_delete:
+    path:     /quarter/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Quarter:delete}    
+    
+quarter_select:
+    path:     /quarter/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Quarter:select}    
+
+quarter_update:
+    path:     /quarter/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Quarter:update}    
+
+recitationType:
+    path:     /recitationType/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:RecitationType:select}
+
+recitationType_add:
+    path:     /recitationType/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:RecitationType:add}    
+
+recitationType_delete:
+    path:     /recitationType/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:RecitationType:delete}    
+    
+recitationType_select:
+    path:     /recitationType/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:RecitationType:select}    
+
+recitationType_update:
+    path:     /recitationType/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:RecitationType:update}    
+
+quizType:
+    path:     /quizType/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:QuizType:select}
+
+quizType_add:
+    path:     /quizType/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:QuizType:add}    
+
+quizType_delete:
+    path:     /quizType/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:QuizType:delete}    
+    
+quizType_select:
+    path:     /quizType/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:QuizType:select}    
+
+quizType_update:
+    path:     /quizType/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:QuizType:update}    
+
+teacherClass:
+    path:     /teacherClass/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:TeacherClass:select}
+
+teacherClass_add:
+    path:     /teacherClass/add/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:TeacherClass:add}    
+
+teacherClass_delete:
+    path:     /teacherClass/delete/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:TeacherClass:delete}    
+    
+teacherClass_select:
+    path:     /teacherClass/select/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:TeacherClass:select}    
+
+teacherClass_update:
+    path:     /teacherClass/update/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:TeacherClass:update}    
+
+quiz_data_entry:
+    path:     /quiz_data_entry/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+recitation_data_entry:
+    path:     /recitation_data_entry/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+assignment_data_entry:
+    path:     /assignment_data_entry/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+project_data_entry:
+    path:     /project_data_entry/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+examination_data_entry:
+    path:     /examination_data_entry/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+quiz_report_generation:
+    path:     /quiz_report_generation/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+recitation_report_generation:
+    path:     /recitation_report_generation/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+assignment_report_generation:
+    path:     /assignment_report_generation/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+project_report_generation:
+    path:     /project_report_generation/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}
+
+examination_report_generation:
+    path:     /examination_report_generation/
+    defaults: { _controller: ErwinStudentAdministrationSystemBundle:Default:index}

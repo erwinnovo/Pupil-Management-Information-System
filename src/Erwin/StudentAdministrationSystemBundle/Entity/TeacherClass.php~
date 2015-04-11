@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Description of TeacherClass
+ *
+ * @author erwin
+ */
+
+namespace Erwin\StudentAdministrationSystemBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="teacherClass")
+ */
+class TeacherClass
+{
+    /**
+    * @ORM\Column(type="integer")
+    * @ORM\Id
+    * @ORM\GeneratedValue(strategy="AUTO")
+    */
+    protected $teacherClassId;
+
+    /**
+    * @ORM\Column(type="integer")
+    */    
+    protected $classId;
+
+    
+    /**
+    * @ORM\Column(type="integer")
+    */    
+    protected $teacherId;
+
+}

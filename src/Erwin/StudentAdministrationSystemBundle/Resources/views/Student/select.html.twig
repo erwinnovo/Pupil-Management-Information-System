@@ -1,0 +1,93 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Student:student.html.twig' %}
+{% block selectForm %}
+    <div class="div-select">
+        <table style="margin: auto;">
+            <tr>
+                <td>        
+                    <h4 style="margin: 10px; color:purple; font-weight:bold;">
+                        Pupil Administration System
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <table border="5" style="margin: auto;">
+                <tr>
+                    <th colSpan="4" style="text-align:center; color:blue;">
+                        Add New Student Record =================>
+                    </th>
+                    <td colSpan="2" style="text-align:center; color:blue;">
+                        <a href="{{ path("student_add") }}">Add</a>
+                    </td>
+                </tr>    
+                <tr>
+                    <th colSpan="4" style="text-align:center; color:blue;">
+                        Search Criteria
+                    </th>
+                    <th colSpan="2" rowSpan="2" style="text-align:center; color:blue;">
+                        Actions
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align:center;">Student ID</th>
+                    <th style="text-align:center;">First Name</th>
+                    <th style="text-align:center;">Middle Name</th>
+                    <th style="text-align:center;">Last Name</th>                
+                </tr>
+                <tr>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.studentId, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.firstName, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.middleName, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.lastName, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td colSpan="2" class="center-inside-cell">
+                        {{ form_widget(form.search, {"label" : "Search"}) }}
+                    </td>                               
+                </tr>               
+                <tr>
+                    <th colSpan="4" style="text-align:center; color:blue;">
+                        Search Results
+                    </th>
+                    <th colSpan="2" rowSpan="2" style="text-align:center; color:blue;">
+                        Actions
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align:center;">Student ID</th>
+                    <th style="text-align:center;">First Name</th>
+                    <th style="text-align:center;">Middle Name</th>
+                    <th style="text-align:center;">Last Name</th>                
+                </tr>
+                {% for student in students %}
+                    <tr>
+                        <td style="text-align:center;">
+                            {{ student.studentid }}
+                        </td>
+                        <td style="text-align:center;">
+                            {{ student.firstname }}
+                        </td>
+                        <td style="text-align:center;">
+                            {{ student.middlename }}
+                        </td>
+                        <td style="text-align:center;">
+                            {{ student.lastname }}
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="{{ path("student_update", {"id" : student.studentid}) }}">Update</a>                                        
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="{{ path("student_delete", {"id" : student.studentid}) }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

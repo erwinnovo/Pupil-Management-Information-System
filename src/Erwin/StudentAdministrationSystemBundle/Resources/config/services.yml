@@ -1,0 +1,4 @@
+services:
+#    erwin_student_administration_system.example:
+#        class: Erwin\StudentAdministrationSystemBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

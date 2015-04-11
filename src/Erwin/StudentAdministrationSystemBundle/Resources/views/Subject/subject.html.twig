@@ -1,0 +1,9 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Default:base.html.twig' %}
+{% block title %}PIMS{% endblock %}
+{% block MenuLabel %}Subjects{% endblock %}
+{% block dropDownMenu %}
+    <li><a href="{{ path("subject_select") }}">Select Subject Records</a></li>
+    <li><a href="{{ path("subject_add") }}">Add Subject Records</a></li>
+    {# <li><a href="{{ path("student_update") }}">Update Pupil Records</a></li> #}
+    {# <li><a href="{{ path("student_delete") }}">Delete Pupil Records</a></li> #}
+{% endblock %}

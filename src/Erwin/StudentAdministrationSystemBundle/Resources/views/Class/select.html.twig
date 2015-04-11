@@ -1,0 +1,77 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Class:class.html.twig' %}
+{% block selectForm %}
+    <div class="div-select">
+        <table style="margin: auto;">
+            <tr>
+                <td>        
+                    <h4 style="margin: 10px; color:purple; font-weight:bold;">
+                        Class Administration System
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <table border="5" style="margin: auto;">
+                <tr>
+                    <th colSpan="2" style="text-align:center; color:blue;">
+                        Add New Class Record =================>
+                    </th>
+                    <td colSpan="2" style="text-align:center; color:blue;">
+                        <a href="{{ path("class_add") }}">Add</a>
+                    </td>
+                </tr>    
+                <tr>
+                    <th colSpan="2" style="text-align:center; color:blue;">
+                        Search Criteria
+                    </th>
+                    <th colSpan="2" rowSpan="2" style="text-align:center; color:blue;">
+                        Actions
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align:center;">Class ID</th>
+                    <th style="text-align:center;">Class Name</th>
+                </tr>
+                <tr>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.classId, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td class="center-inside-cell">
+                        {{ form_widget(form.className, {"attr" : {"class" : "student-box"}}) }}
+                    </td>
+                    <td colSpan="2" class="center-inside-cell">
+                        {{ form_widget(form.search, {"label" : "Search"}) }}
+                    </td>                               
+                </tr>               
+                <tr>
+                    <th colSpan="2" style="text-align:center; color:blue;">
+                        Search Results
+                    </th>
+                    <th colSpan="2" rowSpan="2" style="text-align:center; color:blue;">
+                        Actions
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align:center;">Class ID</th>
+                    <th style="text-align:center;">Class Name</th>                
+                </tr>
+                {% for clas in class %}
+                    <tr>
+                        <td style="text-align:center;">
+                            {{ clas.classid }}
+                        </td>
+                        <td style="text-align:center;">
+                            {{ clas.classname }}
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="{{ path("class_update", {"id" : clas.classid}) }}">Update</a>                                        
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="{{ path("class_delete", {"id" : clas.classid}) }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Default:base.html.twig' %}
+{% block dropDownMenu %}
+    {% for item in menu %}
+        {% if item == "Data Maintenance" %}
+            <li class="dropdown-submenu"><a>{{ item }}</a>
+                <ul class="dropdown-menu">
+                    {% for subitemMaintenance in subMenuDataMaintenance %}
+                        <li><a href="{{ path(subitemMaintenance.href) }}">{{subitemMaintenance["menuitem"]}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% elseif item == "Data Entry" %}
+            <li class="dropdown-submenu"><a>{{ item }}</a>
+                <ul class="dropdown-menu">
+                    {% for subitemEntry in subMenuDataEntry %}
+                        <li><a href="{{ url(subitemEntry.href) }}">{{subitemEntry.menuitem}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>            
+        {% else %}
+            <li class="dropdown-submenu"><a>{{ item }}</a>
+                <ul class="dropdown-menu">
+                    {% for subitemReport in subMenuReportGeneration %}
+                        <li><a href="{{ url(subitemReport.href) }}">{{subitemReport.menuitem}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>            
+            
+        {% endif %}
+    {% endfor %}
+{% endblock %}

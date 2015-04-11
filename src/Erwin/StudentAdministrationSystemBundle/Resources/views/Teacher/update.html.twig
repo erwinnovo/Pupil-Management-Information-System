@@ -1,0 +1,41 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Teacher:teacher.html.twig' %}
+{% block updateForm %}
+    <div class="div-update">
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            {{ form_errors(form) }}
+                <div>
+                    {{ form_label(form.teacherId, "Teacher ID:") }}
+                    {{ form_errors(form.teacherId) }}
+                    {{ form_widget(form.teacherId,  { "attr": {"value": teacher.teacherId }, "disabled" : "true" }) }}
+                </div>       
+                <div>
+                    {{ form_label(form.firstName, "First Name:") }}
+                    {{ form_errors(form.firstName) }}
+                    {{ form_widget(form.firstName, { "attr": {"value": teacher.firstName }}) }}
+                    </div>
+                <div>
+                    {{ form_label(form.middleName, "Middle Name:") }}
+                    {{ form_errors(form.middleName) }}
+                    {{ form_widget(form.middleName, { "attr": {"value": teacher.middleName }}) }}                    
+                </div>
+                <div>
+                    {{ form_label(form.lastName, "Last Name:") }}
+                    {{ form_errors(form.lastName) }}
+                    {{ form_widget(form.lastName, { "attr": {"value": teacher.lastName }}) }}                    
+                </div>
+                <div style="margin-top:5px; float: left;">
+                    {{ form_widget(form.cancel, {attr: {"style": "font-weight: bold; color: blue;"}, "label": "Cancel Update" }) }}
+                </div>
+                <div style="margin-top:5px;">    
+                    {{ form_widget(form.update, { "attr": {"style": "font-weight: bold; color: blue;"}, "label": "Update Record" }) }}
+                </div>       
+        {{ form_end(form) }}
+    </div>            
+{% endblock %}
+{% block processMessage %}
+    {% if message == "" %}
+        <p></p>    
+    {% else %}
+        <p style="margin-left:150px; margin-top: 20px; font-weight:bold; color:maroon;">{{ message }}</p>       
+    {% endif %}
+{% endblock %}    

@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Description of Teacher
+ *
+ * @author erwin
+ */
+
+namespace Erwin\StudentAdministrationSystemBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="student")
+ */
+class Teacher 
+{
+    /**
+    * @ORM\Column(type="integer")
+    * @ORM\Id
+    * @ORM\GeneratedValue(strategy="AUTO")
+    */
+    protected $teacherId;
+
+    /**
+    * @ORM\Column(type="string", length=255)
+    */    
+    protected $firstName;
+
+    /**
+    * @ORM\Column(type="string", length=255)
+    */        
+    protected $middleName;
+
+    /**
+    * @ORM\Column(type="string", length=255)
+    */        
+    protected $lastName;
+}

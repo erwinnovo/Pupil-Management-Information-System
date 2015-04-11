@@ -1,0 +1,17 @@
+erwin_student_administration_system:
+    resource: "@ErwinStudentAdministrationSystemBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# This is one is added by Erwin 24-01-2015.
+# app/config/routing.yml
+AcmeDemoBundle:
+    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+#app:
+#    resource: @AppBundle/Controller/
+#    type:     annotation
+
+
+    
+

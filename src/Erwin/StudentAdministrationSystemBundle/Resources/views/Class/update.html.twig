@@ -1,0 +1,31 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Class:class.html.twig' %}
+{% block updateForm %}
+    <div class="div-update">
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            {{ form_errors(form) }}
+                <div>
+                    {{ form_label(form.classId, "Class ID:") }}
+                    {{ form_errors(form.classId) }}
+                    {{ form_widget(form.classId,  { "attr": {"value": class.classId }, "disabled" : "true" }) }}
+                </div>       
+                <div>
+                    {{ form_label(form.className, "Class Name:") }}
+                    {{ form_errors(form.className) }}
+                    {{ form_widget(form.className, { "attr": {"value": class.className }}) }}
+                </div>
+                <div style="margin-top:5px; float: left;">
+                    {{ form_widget(form.cancel, {attr: {"style": "font-weight: bold; color: blue;"}, "label": "Cancel Update" }) }}
+                </div>
+                <div style="margin-top:5px;">    
+                    {{ form_widget(form.update, { "attr": {"style": "font-weight: bold; color: blue;"}, "label": "Update Record" }) }}
+                </div>       
+        {{ form_end(form) }}
+    </div>            
+{% endblock %}
+{% block processMessage %}
+    {% if message == "" %}
+        <p></p>    
+    {% else %}
+        <p style="margin-left:150px; margin-top: 20px; font-weight:bold; color:maroon;">{{ message }}</p>       
+    {% endif %}
+{% endblock %}    

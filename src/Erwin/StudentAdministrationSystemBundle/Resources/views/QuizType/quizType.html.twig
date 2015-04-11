@@ -1,0 +1,9 @@
+{% extends 'ErwinStudentAdministrationSystemBundle:Default:base.html.twig' %}
+{% block title %}PIMS{% endblock %}
+{% block MenuLabel %}Quiz Types{% endblock %}
+{% block dropDownMenu %}
+    <li><a href="{{ path("quizType_select") }}">Select Quiz Type Records</a></li>
+    <li><a href="{{ path("quizType_add") }}">Add Quiz Type Records</a></li>
+    {# <li><a href="{{ path("student_update") }}">Update Pupil Records</a></li> #}
+    {# <li><a href="{{ path("student_delete") }}">Delete Pupil Records</a></li> #}
+{% endblock %}
